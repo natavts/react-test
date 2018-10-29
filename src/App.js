@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Calculate commission={1.2} />
+        <Calculate commission={1.2} price={1.2}/>
       </div>
     );
   }
