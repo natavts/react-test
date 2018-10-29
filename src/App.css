@@ -1,7 +1,12 @@
-.Multiplier:focus {
-  border: 3px solid #F24645;
+.Price:focus {
+  border: 2px solid #F24645;
 }
 
-.Divider:focus {
-  border: 3px solid #2E3192;
+.Action:focus {
+  border: 2px solid #2E3192;
+}
+
+.Commission,
+.Total {
+  margin: 10pt;
 }

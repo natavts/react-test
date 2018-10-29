@@ -4,28 +4,40 @@ class Calculate extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            multiplier: '',
-            divider: ''
+            price: '',
+            commission: '',
+            aliquot: '1000',
+            amount: ''
         };
 
-        this.handleMultiply = this.handleMultiply.bind(this);
-        this.handleDivide = this.handleDivide.bind(this);
+        this.handlePrice = this.handlePrice.bind(this);
+        this.handleAliquot = this.handleAliquot.bind(this);
     }
 
-    handleMultiply(e) {
-        this.setState({multiplier: e.target.value, divider: e.target.value * 2});
+    handlePrice(e) {
+        let price = e.target.value,
+            commission = this.props.commission * e.target.value,
+            amount = commission * this.state.aliquot / 1000;
+        this.setState({price: price, commission: commission, amount: amount});
     }
 
-    handleDivide(e) {
-        this.setState({divider: e.target.value, multiplier: e.target.value / 2});
+    handleAliquot(e) {
+        this.setState({aliquot: e.target.value});
     }
-
 
     render() {
         return (
             <div className="Calculate">
-                <input className="Multiplier" type="text" value={this.state.multiplier} onChange={this.handleMultiply} />
-                <input className="Divider" type="text" value={this.state.divider} onChange={this.handleDivide} />
+                <form>
+                    <label>Price:
+                        <input className="Price" type="text" value={this.state.price} onChange={this.handlePrice} />
+                    </label>
+                    <label>Actions:
+                        <input className="Action" type="text" value={this.state.aliquot} onChange={this.handleAliquot} />
+                    </label>
+                    <div className="Commission">Price with commission: {this.state.commission}</div>
+                    <div className="Total">Total: {this.state.amount}$</div>
+                </form>
             </div>
         );
     }
