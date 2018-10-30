@@ -7,20 +7,39 @@ body {
   font-family: Avenir, Helvecia, Arial, sans-serif;
 }
 
+#root {
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 input {
+  display: block;
   background-color: #f2f2f2;
   border: 2px solid #ddd;
-  border-radius: 20pt;
-  margin: 10pt 0 10pt 15pt;
-  padding-left: 15pt;
-  padding-right: 15pt;
+  border-radius: 20px;
+  margin: 10px 0;
+  padding-left: 15px;
+  padding-right: 15px;
   font-size: 15px;
-  height: 30pt;
+  height: 30px;
   outline: none;
   transition: 0.2s ease-in-out;
   color: #333;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 label {
-  margin: 0 10pt;
+  margin-top: 20px;
+  text-align: center;
 }

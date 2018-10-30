@@ -1,12 +1,27 @@
-.Price:focus {
+.price:focus {
   border: 2px solid #F24645;
 }
 
-.Action:focus {
+.commission:focus {
+  border: 2px solid #FF5300;
+}
+
+.action:focus {
   border: 2px solid #2E3192;
 }
 
-.Commission,
-.Total {
-  margin: 10pt;
+.total:focus {
+  border: 2px solid #00537E;
+}
+
+.general-state {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 10px 15px;
+  font-size: 12px;
+  color: rgb(116, 116, 116);
+  height: 65px;
+  width: 25%;
+  margin: 0 auto;
 }
