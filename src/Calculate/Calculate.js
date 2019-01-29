@@ -32,7 +32,11 @@ class Calculate extends Component {
     const price = e.target.value;
     const commission = this.props.commission * e.target.value;
     const amount = commission * this.state.actions / 1000;
-    this.setState({ price, commission: commission.toFixed(2), amount: amount.toFixed(2) });
+    this.setState({
+      price,
+      commission: commission.toFixed(2),
+      amount: amount.toFixed(2),
+    });
   }
 
   handleCommission(e) {
